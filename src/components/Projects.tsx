@@ -14,6 +14,11 @@ const AboutContentDiv= styled.div`
         font-size: calc(12px + 0.5vw);
     }
 
+    .imfrLv {
+        width: 100% !important;
+        padding: 0px !important;
+    }
+
     @media screen and (max-width: 750px) {
         width: 90%;
         padding: 4vw;
@@ -48,7 +53,7 @@ const Button = styled.button`
 export default function Projects() {
     const [num1, setNum1] = useState("");
     const [num2, setNum2] = useState("");
-    const [result, setResult] = useState("");
+    const [res, setRes] = useState("");
 
     const handleCalculation = (operation: string) => {
         const first = Number(num1);
@@ -56,7 +61,7 @@ export default function Projects() {
 
         if (isNaN(first) || isNaN(second)) {
             alert("Please enter valid numbers");
-            setResult("Invalid number(s)");
+            setRes("Invalid number");
             return;
         }
     
@@ -73,7 +78,7 @@ export default function Projects() {
                 break;
             case "/":
                 if (second === 0) {
-                    setResult("Zero cannot be the denominator");
+                    setRes("Invalid");
                     return;
                 }else{
                     calculationResult = first / second;
@@ -83,7 +88,7 @@ export default function Projects() {
                 calculationResult = first ** second;
                 break;
         }
-        setResult(String(calculationResult));
+        setRes(String(calculationResult));
     };
 
     return (
@@ -127,9 +132,9 @@ export default function Projects() {
                     <Button onClick={() => handleCalculation("*")}> * </Button>
                     <Button onClick={() => handleCalculation("/")}> / </Button>
                     <Button onClick={() => handleCalculation("**")}> ** </Button>
-                    <Button onClick={() => { setNum1(""); setNum2(""); setResult(""); }}>Clear</Button>
+                    <Button onClick={() => { setNum1(""); setNum2(""); setRes(""); }}>Clear</Button>
                 </div>
-                <p id="output" style={{ color: result[0] === "-" ? "red" : "white" }}>{result}</p>
+                <p id="output" style={{ color: res[0] === "-" ? "red" : "white" }}>{res}</p>
             </main>
         </AboutContentDiv>
     )

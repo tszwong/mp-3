@@ -12,6 +12,11 @@ const AboutContentDiv = styled.div`
         font-size: calc(12px + 0.5vw);
     }
 
+    .imfrLv {
+        width: 100% !important;
+        padding: 0px !important;
+    }
+
     @media screen and (max-width: 750px) {
         width: 90%;
         padding: 4vw;

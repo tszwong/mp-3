@@ -8,7 +8,6 @@ const AboutContentDiv= styled.div`
     margin: auto;
     text-align: center;
     width: 70%;
-    padding: 2vw;
     overflow-y: auto;
 
     font-size: calc(12px + 0.5vw);
@@ -16,8 +15,15 @@ const AboutContentDiv= styled.div`
         font-size: calc(12px + 0.5vw);
     }
 
+    .imfrLv {
+        width: 100% !important;
+        padding: 0px !important;
+    }
+
+    padding-left: 2vw;
+
     @media screen and (max-width: 750px) {
-        width: 90%;
+        width: 100%;
         padding: 4vw;
 
         font-size: calc(10px + 1vw);
@@ -37,7 +43,7 @@ const ProfileImage = styled.img`
 export default function Home() {
     return (
         <AboutContentDiv>
-            <ProfileImage src="/public/IMG_1157.JPG" alt="Profile" />
+            <ProfileImage src="/IMG_1157.JPG" alt="Profile" />
             <p>
                 My name is Tsz Kit Wong and I am a senior Computer Science student at Boston University.
                 I would like to work in a software engineer or DevOps engineer role or pursue
