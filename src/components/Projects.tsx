@@ -19,6 +19,8 @@ const AboutContentDiv= styled.div`
         padding: 0px !important;
     }
 
+    padding-left: 2vw !important;
+
     @media screen and (max-width: 750px) {
         width: 90%;
         padding: 4vw;
