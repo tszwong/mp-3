@@ -3,6 +3,10 @@
   padding: 0px !important;
 }
 
+body {
+  display: block !important;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
